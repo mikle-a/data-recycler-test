@@ -1,0 +1,16 @@
+server:
+  port: ${APP_PORT:8080}
+
+logging:
+  level:
+    root: "${LOG_LEVEL:info}"
+
+app:
+  batch-size: ${APP_BATCH_SIZE:1000}
+  complete-jobs-retention-period: 10m
+  database:
+    url: ${APP_JDBC_URL:jdbc:postgresql://localhost:5432/postgres}
+    user: ${APP_DB_USER:postgres}
+    pass: ${APP_DB_PASS:postgres}
+  executor:
+    threads-count: 10

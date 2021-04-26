@@ -1,0 +1,1 @@
+CREATE TABLE "data".big_table (id serial8 NOT NULL, ts timestamp NOT NULL);

@@ -1,0 +1,10 @@
+postgres:
+  image: postgres
+  volumes:
+    - ./sql/schema.sql:/docker-entrypoint-initdb.d/1-schema.sql
+    - ./sql/table.sql:/docker-entrypoint-initdb.d/2-table.sql
+    - ./sql/data.sql:/docker-entrypoint-initdb.d/3-data.sql
+  environment:
+    - POSTGRES_PASSWORD=postgres
+  ports:
+    - 5432:5432
